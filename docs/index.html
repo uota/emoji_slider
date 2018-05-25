@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>hand spinner</title>
+</head>
+<body>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+<!--
+$(function(){
+	emojis = ['😭','😩','😫','😣','😔','😞','☹️','🙁','😐','🙂','😀','😃','😃','😆','😂','🤣'];
+	$('#slider').on('input change', function () {
+		var val = $(this).val();
+		$("#emoji").html(emojis[val]);
+	} );
+});
+
+// -->
+</script>
+<style>
+/* 画面中心に表示 */
+html {
+	padding: 0;
+	margin: 0 auto;
+	height: 100%;
+	display: table;
+}
+ 
+body {
+	padding: 0;
+	margin: 0 auto;
+	min-height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	overflow:hidden;
+}
+ 
+#emoji{
+	vertical-align:middle;
+	text-align: center;
+	font-size: 250px;
+}
+
+#div-slider{
+	text-align: center;
+}
+
+#slider{
+	width: 250px;
+	height: 100px;
+}
+
+</style>
+<noscript>java scriptが有効になっていないため表示できません。</noscript>
+<div class="c1" id="emoji">
+😐
+</div>
+<div class="c2" id="div-slider">
+<input type="range" name="slider" id="slider" min="0" max="15" step="1" value="8">
+</div>
+</body>
+</html>
